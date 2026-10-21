@@ -1,0 +1,75 @@
+TYPE: HO1
+
+SOMMETS:
+G
+H
+I
+F
+J
+A
+K
+B
+C
+D
+E
+O
+N
+L
+M
+P
+Q
+R
+S
+U
+T
+V
+
+ARETES:
+# Format: sommet1 sommet2 poids [nom_optionnel]
+# Cycle haut gauche G-H-I-J-F-G
+G H 100
+H I 80
+I J 120
+J F 90
+F G 110
+
+# Connexions depuis J et A
+J A 150
+A B 60
+
+# Connexions E-O (zone droite)
+A E 200
+E O 180
+
+# Zone centrale B-D-N-O
+O N 140
+N D 100
+D B 70
+B C 90
+
+# Zone K (sous F-J)
+K F 130
+K J 95
+K L 160
+L K 50
+
+
+# Zone inférieure gauche L-M
+L M 140
+M C 110
+
+# Zone P-Q-R-S
+B P 85
+C P 95
+P Q 120
+Q R 100
+R S 150
+
+# Zone inférieure S-U-T-N
+S U 130
+U T 110
+T N 90
+
+# Connexion L-V-T
+L V 200
+V T 170

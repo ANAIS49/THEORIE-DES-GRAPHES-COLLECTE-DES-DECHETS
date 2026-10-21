@@ -1,0 +1,91 @@
+TYPE: HO2
+
+SOMMETS:
+G
+H
+I
+F
+J
+A
+K
+B
+C
+D
+E
+O
+N
+L
+M
+P
+Q
+R
+S
+U
+T
+V
+
+ARETES:
+# Format: sommet1 sommet2 poids bidirectionnel nbVoies [nom_optionnel]
+# Cycle orienté G→H→I→J, F→G
+G H 100 false 2
+H I 80 false 2
+I J 120 false 2
+F G 110 false 2
+
+# J et F connexions
+J F 90 false 2
+J A 150 false 2
+
+# A↔B (bidirectionnel)
+A B 60 true 2
+B A 60 true 2
+
+# Connexions E-O
+O E 200 false 2
+E O 180 false 2
+
+# Zone centrale (plusieurs bidirectionnels)
+O N 140 false 2
+N D 100 false 2
+D B 70 true 2
+B D 70 true 2
+D N 100 true 2
+N D 100 true 2
+
+# F↔K, J↔K
+F K 130 true 2
+K F 130 true 2
+J K 95 true 2
+K J 95 true 2
+
+# K→L avec boucle sur L
+K L 160 false 2
+L K 50 false 1
+
+# L↔M
+L M 140 true 2
+M L 140 true 2
+
+# Vers C et P
+B C 90 false 2
+C P 95 false 2
+B P 85 false 2
+
+# P-Q-R avec Q↔R
+P Q 120 false 2
+Q R 100 true 2
+R Q 100 true 2
+R S 150 false 2
+
+# S→U→T avec T↔N
+S U 130 false 2
+U T 110 false 2
+T N 90 true 2
+N T 90 true 2
+
+# V↔T
+V T 170 true 2
+T V 170 true 2
+
+# L→M→?
+M C 110 false 2

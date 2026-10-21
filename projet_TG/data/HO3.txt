@@ -1,0 +1,104 @@
+TYPE: HO3
+
+SOMMETS:
+G
+H
+I
+F
+J
+A
+K
+B
+C
+D
+E
+O
+N
+L
+M
+P
+Q
+R
+S
+U
+T
+V
+
+ARETES:
+# Format: sommet1 sommet2 poids bidirectionnel nbVoies [nom_optionnel]
+
+# G-H-I non orienté 1 voie (ramassage complet)
+G H 100 true 1
+H I 80 true 1
+
+# I→J orienté
+I J 120 false 2
+
+# F↔J bidirectionnel plusieurs voies
+F J 90 true 2
+J F 90 true 2
+
+# J→A orienté
+J A 150 false 2
+
+# A↔B bidirectionnel 1 voie
+A B 60 true 1
+B A 60 true 1
+
+# E↔O bidirectionnel plusieurs voies
+E O 180 true 2
+O E 180 true 2
+
+# O→N orienté
+O N 140 false 2
+
+# B↔D bidirectionnel plusieurs voies
+B D 70 true 2
+D B 70 true 2
+
+# D→N orienté
+D N 100 false 2
+
+# N→O orienté
+N O 140 false 2
+
+# K→F, K→J orientés
+K F 130 false 2
+K J 95 false 2
+
+# K→L avec boucle L
+K L 160 false 2
+L K 50 false 1
+
+# L→M orienté
+L M 140 false 2
+
+# C→P, B→P orientés
+C P 95 false 2
+B P 85 false 2
+
+# P→Q orienté
+P Q 120 false 2
+
+# Q↔R bidirectionnel
+Q R 100 true 2
+R Q 100 true 2
+
+# R→S orienté
+R S 150 false 2
+
+# S→U→T orientés
+S U 130 false 2
+U T 110 false 2
+
+# T↔N bidirectionnel
+T N 90 true 2
+N T 90 true 2
+
+# V→T orienté
+V T 170 false 2
+
+# U-T non orienté 1 voie
+U T 110 true 1
+```
+
